@@ -1,0 +1,56 @@
+<html>
+<head>
+    <title>Mileage Calculator</title>
+    <style>
+        body 
+        {
+            background: linear-gradient(gold);
+        }
+        .id1 
+        {
+            text-align: center;
+            color: black;
+        }
+        .box 
+        {
+            text-align: center;
+            width: 50%;
+            background-color:cyan;
+            border: solid 4px black;
+            padding: 20px;
+            margin: 50px auto;
+        }
+        .result 
+        {
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="id1"><u>Calculate Mileage Here</u></h1>
+    <div class="box">
+        <h2><u>Mileage</u></h2>
+        <h3>Mahalakshmi S(25018377)</h3>
+    <form method="POST">
+{% csrf_token %}
+<div class="formelt">
+Distance : <input type="text" name="distance" value="{{d}}"></input>(in km)<br/>
+</div>
+<div class="formelt">
+Fuel consumed : <input type="text" name="fuel consumed" value="{{f}}"></input>(in L)<br/>
+</div>
+<div class="formelt">
+<input type="submit" value="Calculate"></input><br/>
+</div>
+<div class="formelt">
+Mileage : <input type="text" name="mileage" value="{{mileage}}"></input>km/L<br/>
+</div>
+</form>
+</div>
+</div>
+</body>
+</html>
+
+
+        
+        
